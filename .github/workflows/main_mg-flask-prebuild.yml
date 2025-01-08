@@ -17,7 +17,11 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Run prebuild script
-        run: ./prebuild.sh
+        run: |
+          apt-get install -y libcups2-dev
+          apt-get install -y python3-dev
+          apt-get install -y cups cups-client
+          /etc/init.d/cups start
 
 
       - name: Set up Python version
