@@ -21,7 +21,7 @@ jobs:
           sudo apt-get install -y libcups2-dev
           sudo apt-get install -y python3-dev
           sudo apt-get install -y cups cups-client
-          sudo /etc/init.d/cups start
+          sudo /etc/init.d/cups start >> start.txt
 
 
       - name: Set up Python version
